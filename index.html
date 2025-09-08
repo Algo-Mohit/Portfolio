@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohit's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+    rel="stylesheet"/>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script  src="https://cdn.emailjs.com/sdk/2.6.4/email.min.js"></script>
 </head>
 <body>
     <div id="main">
@@ -34,6 +35,14 @@
                 </ul>
             </div>
         </div>
+
+
+        <button id="menu-toggle" aria-label="Toggle menu">
+        <i class="ri-menu-line"></i>
+        </button>
+
+
+
          </div>
          <div id="right">
         <div id="rightslider">
@@ -42,7 +51,7 @@
                 <h3>I'm <span id="element"></span></h3>
                 
             </div>
-            <img id="backgroundimg" src="mohitbackground.png" alt="background image">
+            <!-- <img id="backgroundimg" src="mohitbackground.png" alt="background image"> -->
         </div>
   
     <div class="aboutme" id="about">
@@ -82,6 +91,7 @@
                  </ul>
             </div>
             <div id="exp">
+                <br>
                 <h2>Experience</h2>
                 <div id="company">
                     <img src="dredtech_innovations_logo.jpeg" alt="logodred">
@@ -135,6 +145,8 @@
     </div>
     <div id="myproject">
       <div id="projectinfo">
+        
+
         <h1>Projects</h1>
         <ul>
             <li>CA Assistant system</li>
@@ -205,25 +217,22 @@
                 </div>
             </div>
             <div id="contactright">
-                <div id="inputtop">
-                <div id="inputname">
-                <h3>Your Name</h3>
-                <input type="text" placeholder="Enter your name">
-                </div>
-                <div id="inputemail">
-                <h3>Your Email</h3>
-                <input type="text" placeholder="Enter your email">
-                </div>
-                </div>
-                <div id="inputbottom">
-                    <h3>Subject</h3>
-                    <input type="text" placeholder="Enter subject" id="sub">
-                    <h3>Message</h3>
-                    <textarea name="message" placeholder="Type your message here..." id="Message" rows="10" cols="55" >
+                  <form action="your-server-endpoint" method="post" id="contact-form">
+                    <input type="text" id="myname" name="name" placeholder="Enter your name" required>
+                    <br>
 
-                    </textarea>
-                   <button > Send Message </button>
-                </div>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <br>
+
+                    <input type="text" id="sub" name="subject" placeholder="Enter subject" required>
+                    <br>
+
+                    <textarea id="Message" name="message" rows="10" placeholder="Type your message here..." required></textarea>
+                    <br>
+
+                    <button type="submit" >Send Message</button>
+                    </form>
+
             </div>
           </div>
       </div>
@@ -232,6 +241,8 @@
         <h5>Designed by Mohit Pareek</h5>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
     <script src="script.js"></script>
 </body>
 </html>
