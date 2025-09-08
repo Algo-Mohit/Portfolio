@@ -1,0 +1,199 @@
+/* ------------------------------
+   Responsive Styles
+   ------------------------------ */
+
+/* Tablet and smaller (max-width: 992px) */
+@media (max-width: 992px) {
+  #main {
+    flex-direction: column;
+  }
+
+  #mainresume {
+    flex-direction: column;
+  }
+
+  #myskills {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #myskills img {
+    width: 70%;
+    margin: 20px auto;
+    height: auto;
+  }
+
+  #skill {
+    width: 100%;
+    padding: 0 20px;
+  }
+  #contactright button{
+    margin-left: 17vh;
+  }
+  .dot{
+    margin-left: -10vw;
+
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Sidebar toggle */
+  #menu-toggle {
+    display: block;
+  }
+
+  #leftslider {
+    position: fixed;
+    left: -300px; /* hidden */
+    transition: left 0.3s ease;
+    /* width: 250px; */
+    /* height: 100vh; */
+    background-color: rgb(2, 2, 20);
+    z-index: 1000;
+  }
+
+
+  #leftslider.active {
+    left: 0; /* visible when active */
+  }
+
+  #right {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* About Section */
+  #about2 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about2 img {
+    width: 25%;
+    height: auto;
+    margin: auto;
+  }
+
+  #about3 {
+    padding: 20px;
+  }
+
+  /* Resume Section */
+  #mainresume {
+    flex-direction: column;
+  }
+
+  #edu,
+  #exp {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  /* Projects Section */
+  #myproject {
+    flex-direction: column;
+    margin-top: 8vh;
+  }
+
+  .container {
+    width: 100%;
+    margin-left: 0;
+    height: auto;
+    margin-top: -30vh;
+  }
+
+  .images img {
+    height: auto;
+  }
+
+  .dot {
+    position: static;
+    margin: 15px auto;
+  }
+
+  /* Contact Section */
+  #contactmain {
+    flex-direction: column;
+  }
+  .contactus{
+    height: 180vh;
+  }
+
+  #contactleft,
+  #contactright {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  #sub,
+  #Message {
+    width: 100%;
+  }
+
+  #contactright button {
+    margin-left: 0;
+    display: block;
+    margin: 20px auto;
+  }
+.footer {
+  min-height: 60px;
+  position: static;
+  margin-top: auto;
+}
+
+}
+
+/*Extra Small Mobile (max-width: 576px) */
+ @media (max-width: 576px) {
+  h1 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+
+  h3,
+  p {
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+  }
+
+ 
+  #logoname {
+    font-size: 1.5rem;
+  }
+
+  #menu li {
+    font-size: 1rem;
+  }
+  #menu-toggle {
+    display: block;
+  }
+
+  #leftslider {
+    position: fixed;
+    left: -300px;
+    transition: left 0.3s ease;
+    background-color: rgb(2, 2, 20);
+    z-index: 1000;
+  }
+  #rightslider{
+     min-height: 100vh; 
+    min-width: 100vw;
+}
+#left{
+    display: hidden;
+}
+
+}
+
+@media (max-width : 400px)
+{
+   #rightslider{
+    background-image: url(mobilebackgroung.png);
+    object-fit: cover;
+    margin-top: -6px;
+  }
+  #myskills img{
+        width: 100%;
+        height: 250px;
+        margin-top: -15vh;
+  }
+}
